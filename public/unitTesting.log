@@ -1,0 +1,1686 @@
+2024-04-08 11:16:04,135 unitTesting-3b204c3b-010b-4d5c-9deb-c68c613485f2 INFO     {'buildId': '3b204c3b-010b-4d5c-9deb-c68c613485f2', 'userId': 'yd00102', 'cohortId': 'COHORT_ME_BUILDOUT_XFLIX_NODE_ENROLL_1641732453619', 'meId': 'ME_BUILDOUT_XFLIX_NODE', 'moduleId': 'ME_BUILDOUT_XFLIX_NODE_MODULE_NODE', 'buildType': 'BUILD_TYPE_SUBMIT', 'assessmentType': 'ASSESSMENT_TYPE_UNTIMED', 'questionId': None, 'psDsContext': None, 'timestampInMs': 1712574950911, 'meAssessment': {'meId': 'ME_BUILDOUT_XFLIX_NODE', 'stages': [<BuildStageType.BUILD_STAGE_TYPE_SETUP: 'setup'>, <BuildStageType.BUILD_STAGE_TYPE_UNIT_TESTING: 'unitTesting'>], 'assessmentEndpoint': 'https://me-buildout-xflix-node-prod-nnjjst7g5q-uc.a.run.app/', 'fargateTaskDefinition': None, 'meFolder': 'me_buildout_xflix', 'runInIsolation': False}, 'workingDir': '//yd00102-ME_BUILDOUT_XFLIX_NODE-3b204c3b-010b-4d5c-9deb-c68c613485f2', 'commitId': 'c8813cc2d2b2a9890f47aa6135a0142a8e6f8a7d', 'userRepoDir': '/yd00102-ME_BUILDOUT_XFLIX_NODE-3b204c3b-010b-4d5c-9deb-c68c613485f2/yd00102-ME_BUILDOUT_XFLIX_NODE'}
+2024-04-08 11:16:04,135 unitTesting-3b204c3b-010b-4d5c-9deb-c68c613485f2 INFO     Running assessment script...
+2024-04-08 11:27:44,161 unitTesting-3b204c3b-010b-4d5c-9deb-c68c613485f2 INFO     Test logs : Dropping xflix database
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/xflix
+MongoDB server version: 3.6.3
+{ "ok" : 1 }
+Checking for backend directory
+Delete any previous pm2 process
+Check for already running application on 8082
+Starting the application
+
+added 120 packages, and audited 121 packages in 5s
+
+18 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice 
+npm notice New major version of npm available! 8.19.4 -> 10.5.1
+npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.5.1>
+npm notice Run `npm install -g npm@10.5.1` to update!
+npm notice 
+[PM2] Starting /usr/bin/npm in fork_mode (1 instance)
+[PM2] Done.
+┌────┬────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0  │ npm    │ default     │ N/A     │ fork    │ 105      │ 0s     │ 0    │ online    │ 0%       │ 37.2mb   │ *****     │ disabled │
+└────┴────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+Wait for the application to start
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+Print application logs
+[TAILING] Tailing last 1000 lines for [npm] process (change the value with --lines option)
+/home/.pm2/logs/npm-error.log last 1000 lines:
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+0|npm      | (Use `node --trace-warnings ...` to show where the warning was created)
+0|npm      | (node:140) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+
+/home/.pm2/logs/npm-out.log last 1000 lines:
+0|npm      | 
+0|npm      | > yd00102-me_buildout_xflix_node@1.0.0 start
+0|npm      | > nodemon backend/index.js
+0|npm      | 
+0|npm      | [33m[nodemon] 3.1.0[39m
+0|npm      | [33m[nodemon] to restart at any time, enter `rs`[39m
+0|npm      | [33m[nodemon] watching path(s): *.*[39m
+0|npm      | [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+0|npm      | [32m[nodemon] starting `node backend/index.js`[39m
+0|npm      | mongodb in connected
+0|npm      | Server is running on http://localhost:2000
+
+Print all LISTEN ports
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::2000                 :::*                    LISTEN     
+waiting for Node application to start on port 8082
+
