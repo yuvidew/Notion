@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Notion Clone Website
+
+This project is a clone of Notion, built using the following technologies:
+- **Next.js**: A React framework for building server-side rendered applications.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **Convex**: A backend-as-a-service that simplifies building full-stack applications.
+- **EdgeStore**: A storage solution for managing and serving files.
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+To get started with the Notion Clone, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yuvidew/notion-clone.git
+   cd notion-clone
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables:**
+   Create a `.env.local` file in the root directory and add the necessary environment variables for Convex and EdgeStore.
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+notion-clone/
+├── public/             # Static files
+├── src/
+│   ├── components/     # Reusable components
+│   ├── pages/          # Next.js pages
+│   ├── styles/         # Tailwind CSS styles
+│   ├── utils/          # Utility functions
+│   └── services/       # Convex and EdgeStore services
+├── .env.local          # Environment variables
+├── next.config.js      # Next.js configuration
+├── tailwind.config.js  # Tailwind CSS configuration
+├── package.json        # Project dependencies
+└── README.md           # Project documentation
+```
+
+## Features
+
+- **Rich Text Editing**: Create and edit rich text content with various formatting options.
+- **Page Management**: Create, edit, and delete pages to organize your content.
+- **Real-time Collaboration**: Collaborate with others in real-time.
+- **File Storage**: Upload and manage files with EdgeStore.
+- **Authentication**: User authentication and authorization using Convex.
+
+## Technologies
+
+- **Next.js**: Framework for server-rendered React applications.
+- **Tailwind CSS**: Utility-first CSS framework.
+- **Convex**: Backend-as-a-service for data management.
+- **EdgeStore**: Storage solution for handling files.
+
+## Installation
+
+To install the dependencies, run the following command:
+
+```bash
+npm install
+```
+
+## Usage
+
+### Running the Development Server
+
+To start the development server, use:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Building for Production
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To build the project for production, use:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+```
 
-## Learn More
+To start the production server, use:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Linting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run ESLint, use:
 
-## Deploy on Vercel
+```bash
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Tailwind CSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Tailwind CSS is configured in the `tailwind.config.js` file. You can customize the design system by editing this file.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes.
+4. Push to your branch.
+5. Open a pull request.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+---
+
+Happy coding! If you have any questions, feel free to open an issue or reach out.
